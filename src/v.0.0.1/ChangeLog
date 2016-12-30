@@ -1,0 +1,8 @@
+
+2008-05-22 mega-eth
+	* [FAT16] Make listing a directory much faster.
+	* [FAT16] Code size reduction.
+
+2008-05-17 mega-eth
+	* Initial release.
+

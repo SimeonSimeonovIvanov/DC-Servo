@@ -1,0 +1,69 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: com - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x402 /fo"Debug/com.res" /d "_DEBUG" "Q:\EAGLE\DC Servo\src\v.0.0.1\FreeMODBUS\Master\Win COM\com.rc"" 
+Creating temporary file "C:\DOCUME~1\Simo\LOCALS~1\Temp\RSP103.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/com.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"Q:\EAGLE\DC Servo\src\v.0.0.1\FreeMODBUS\Master\Win COM\dlg\AboutDlg.cpp"
+"Q:\EAGLE\DC Servo\src\v.0.0.1\FreeMODBUS\Master\Win COM\dlg\adcConstDlg.cpp"
+"Q:\EAGLE\DC Servo\src\v.0.0.1\FreeMODBUS\Master\Win COM\com.cpp"
+"Q:\EAGLE\DC Servo\src\v.0.0.1\FreeMODBUS\Master\Win COM\dlg\dacConstDlg.cpp"
+"Q:\EAGLE\DC Servo\src\v.0.0.1\FreeMODBUS\Master\Win COM\modbus\modbus-rtu.cpp"
+"Q:\EAGLE\DC Servo\src\v.0.0.1\FreeMODBUS\Master\Win COM\modbus\modbus-tcp.cpp"
+"Q:\EAGLE\DC Servo\src\v.0.0.1\FreeMODBUS\Master\Win COM\modbus\modbus.cpp"
+"Q:\EAGLE\DC Servo\src\v.0.0.1\FreeMODBUS\Master\Win COM\dlg\ServoControlDlg.cpp"
+"Q:\EAGLE\DC Servo\src\v.0.0.1\FreeMODBUS\Master\Win COM\dlg\tcpSetingsDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Simo\LOCALS~1\Temp\RSP103.tmp" 
+Creating temporary file "C:\DOCUME~1\Simo\LOCALS~1\Temp\RSP104.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/com.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"Q:\EAGLE\DC Servo\src\v.0.0.1\FreeMODBUS\Master\Win COM\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Simo\LOCALS~1\Temp\RSP104.tmp" 
+Creating temporary file "C:\DOCUME~1\Simo\LOCALS~1\Temp\RSP105.tmp" with contents
+[
+comctl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/com.pdb" /debug /machine:I386 /out:"Debug/com.exe" /pdbtype:sept 
+".\Debug\AboutDlg.obj"
+".\Debug\adcConstDlg.obj"
+".\Debug\com.obj"
+".\Debug\dacConstDlg.obj"
+".\Debug\modbus-rtu.obj"
+".\Debug\modbus-tcp.obj"
+".\Debug\modbus.obj"
+".\Debug\ServoControlDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\tcpSetingsDlg.obj"
+".\Debug\com.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\Simo\LOCALS~1\Temp\RSP105.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+AboutDlg.cpp
+adcConstDlg.cpp
+com.cpp
+dacConstDlg.cpp
+modbus-rtu.cpp
+modbus-tcp.cpp
+modbus.cpp
+ServoControlDlg.cpp
+tcpSetingsDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+com.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

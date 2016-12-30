@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PIC32-MAXI-WEB Demo Page</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="javas.js" type="text/javascript"></script>
+</head>
+
+<body>
+<img id="logo" src="logo.gif" alt="Olimex" />
+<div id="title">TCP/IP Stack Demo Application<br /><div style="font-size: 0.8em;">Stack Version: ~version~<br />Build Date: ~builddate~</div></div>
+
+<div id="panels">
+
+<div id="buttons">
+    <div class="names">
+        B1<span class="indicators" id="btn1">&bull;</span><br />
+        B2<span class="indicators" id="btn2">&bull;</span><br />
+        B3<span class="indicators" id="btn3">&bull;</span><br />
+    </div>
+</div>
+
+<div id="digins">
+    <div class="names">
+        DIN1<span class="indicators" id="din1">&bull;</span><br />
+        DIN2<span class="indicators" id="din2">&bull;</span><br />
+    </div>
+</div>
+
+<div id="leds">
+    <div class="names">
+        LED1<span class="actuators"><a id="led1" onclick="newAJAXCommand('leds.cgi?led=1');">&bull;</a></span><br />
+        LED2<span class="actuators"><a id="led2" onclick="newAJAXCommand('leds.cgi?led=2');">&bull;</a></span><br />
+        LED3<span class="actuators"><a id="led3" onclick="newAJAXCommand('leds.cgi?led=3');">&bull;</a></span><br />        
+    </div>
+</div>
+
+<div id="relays">
+    <div class="names">
+        R1<span class="actuators"><a id="r1" onclick="newAJAXCommand('relays.cgi?r=1');">&bull;</a></span><br />
+        R2<span class="actuators"><a id="r2" onclick="newAJAXCommand('relays.cgi?r=2');">&bull;</a></span><br /> 
+    </div>
+</div>
+
+<div id="accel">
+	<div class="labels">
+		<u>Accelerometer data:</u><br /><br />
+		X = <span id="accX">?</span><br />
+		Y = <span id="accY">?</span><br />
+		Z = <span id="accZ">?</span><br />
+		t&ordm; = <span id="accT">?</span>&ordm;C<br />
+    </div>
+</div>
+
+<div id="pot">
+	<div class="labels">
+		<u>Potentiometer value:</u><br /><br />
+		Val = <span id="pot0">?</span><br />
+    </div>
+</div>
+
+</div>
+<div class="spacer">&nbsp;</div>
+<div id="footer">Copyright &copy; 2010 Olimex Ltd. PIC32-MAXI-WEB</div>
+</body>
+</html>

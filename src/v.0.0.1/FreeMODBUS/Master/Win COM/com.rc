@@ -1,0 +1,488 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Bulgarian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_BGR)
+#ifdef _WIN32
+LANGUAGE LANG_BULGARIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DAC_CONST DIALOG DISCARDABLE  0, 0, 162, 161
+STYLE DS_SYSMODAL | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DAC Cal.Const"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "DAC0",IDC_STATIC__DAC0,10,10,70,50
+    EDITTEXT        IDC_EDIT_DAC0,20,20,50,15,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "Set Const",ID_DAC0_SET_CONST,20,40,50,14
+    GROUPBOX        "DAC1",IDC_STATIC__DAC1,90,10,65,50
+    EDITTEXT        IDC_EDIT_DAC1,100,20,50,15,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "Set Const",ID_DAC1_SET_CONST,100,40,50,14
+    PUSHBUTTON      "Read Const",IDC_BUTTON_DAC_READ_CONST,10,65,145,15
+    PUSHBUTTON      "Load Def. Const",IDC_BUTTON_DAC_LOAD_DEF_CONST,10,90,
+                    145,15
+    PUSHBUTTON      "Load From EEPROM",IDC_BUTTON_DAC_LOAD_FROM_EEPROM,10,
+                    115,145,15
+    PUSHBUTTON      "Save To EEPROM",ID_DAC_CONST_SAVE_TO_EEPROM,10,140,145,
+                    15,BS_MULTILINE
+END
+
+IDD_ADC_CONST DIALOG DISCARDABLE  0, 0, 322, 142
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ADC Cal.Const"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "ADC0",IDC_STATIC_ADC0,5,5,70,50
+    EDITTEXT        IDC_EDIT_ADC0_CONST,10,15,60,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    PUSHBUTTON      "Set Const",IDC_BUTTON_ADC0_SET_CONST,10,34,60,15
+    GROUPBOX        "ADC1",IDC_STATIC_ADC1,85,5,70,50
+    EDITTEXT        IDC_EDIT_ADC1_CONST,90,15,60,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    PUSHBUTTON      "Set Const",IDC_BUTTON_ADC1_SET_CONST,90,34,60,15
+    GROUPBOX        "ADC2",IDC_STATIC_ADC2,165,5,70,50
+    EDITTEXT        IDC_EDIT_ADC2_CONST,170,15,60,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    PUSHBUTTON      "Set Const",IDC_BUTTON_ADC2_SET_CONST,170,34,60,15
+    GROUPBOX        "ADC3",IDC_STATIC_ADC3,245,5,70,50
+    EDITTEXT        IDC_EDIT_ADC3_CONST,250,15,60,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    PUSHBUTTON      "Set Const",IDC_BUTTON_ADC3_SET_CONST,250,34,60,15
+    GROUPBOX        "ADC4",IDC_STATIC_ADC4,5,60,70,50
+    EDITTEXT        IDC_EDIT_ADC4_CONST,10,70,60,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    PUSHBUTTON      "Set Const",IDC_BUTTON_ADC4_SET_CONST,10,89,60,15
+    GROUPBOX        "ADC5",IDC_STATIC_ADC5,85,60,70,50
+    EDITTEXT        IDC_EDIT_ADC5_CONST,90,70,60,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    PUSHBUTTON      "Set Const",IDC_BUTTON_ADC5_SET_CONST,90,89,60,15
+    GROUPBOX        "ADC6",IDC_STATIC_ADC6,165,60,70,50
+    EDITTEXT        IDC_EDIT_ADC6_CONST,170,70,60,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    PUSHBUTTON      "Set Const",IDC_BUTTON_ADC6_SET_CONST,170,89,60,15
+    GROUPBOX        "ADC7",IDC_STATIC_ADC7,245,60,70,50,WS_DISABLED
+    EDITTEXT        IDC_EDIT_ADC7_CONST,250,70,60,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER | WS_DISABLED
+    PUSHBUTTON      "Set Const",IDC_BUTTON_ADC7_SET_CONST,250,90,60,15,
+                    WS_DISABLED
+    PUSHBUTTON      "Read Const",IDC_BUTTON_ADC_READ_CONST,5,120,70,15
+    PUSHBUTTON      "Load Def. Const",IDC_BUTTON_ADC_LOAD_DEF_CONST,85,120,
+                    70,15
+    PUSHBUTTON      "Load From EEPROM",IDC_BUTTON_ADC_LOAD_FROM_EEPROM,165,
+                    120,70,15
+    PUSHBUTTON      "Save To EEPROM",ID_ADC_CONST_SAVE_TO_EEPROM,245,120,70,
+                    15,BS_MULTILINE
+END
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  22, 17, 154, 66
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About AVR-LPC"
+FONT 8, "System"
+BEGIN
+    LTEXT           "AVR-LPC v.0.0.5",IDC_STATIC,30,5,53,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2007-14",IDC_STATIC,30,15,75,8
+    DEFPUSHBUTTON   "OK",IDOK,115,10,30,10,WS_GROUP
+    LTEXT           "simeon_s._ivanov@abv.bg",IDC_STATIC,30,49,112,11
+    LTEXT           "By Simeon S. Ivanov",IDC_STATIC,30,30,69,8
+    ICON            IDI_IDE,IDI_IDE,5,5,20,20
+END
+
+IDD_TCP_SETINGS DIALOG DISCARDABLE  0, 0, 127, 102
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "TCP Setings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,5,80,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,70,80,50,14
+    CONTROL         "IPAddress1",IDC_IPADDRESS,"SysIPAddress32",WS_TABSTOP,5,
+                    14,100,15
+    EDITTEXT        IDC_EDIT_TCP_PORT,5,45,99,15,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "IP Address:",IDC_STATIC,5,5,37,8
+    LTEXT           "Port:",IDC_STATIC,5,35,16,8
+END
+
+IDD_SERVO_CONTROL DIALOGEX 0, 0, 452, 236
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Servo Control"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Position PID:",IDC_STATIC,10,30,190,170
+    LTEXT           "Kp:",IDC_STATIC,15,45,44,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "~Kp Value~",IDC_STATIC_KP,65,45,39,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_POSITION_PID_P_FACTOR,110,45,40,14,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_POSITION_PID_P_FACTOR,155,45,40,
+                    14
+    LTEXT           "Ki:",IDC_STATIC,15,65,44,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "~Ki Value~",IDC_STATIC_KI,65,65,39,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_POSITION_PID_I_FACTOR,110,65,40,14,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_POSITION_PID_I_FACTOR,155,65,40,
+                    14
+    LTEXT           "Kd:",IDC_STATIC,15,85,44,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "~Kd Value~",IDC_STATIC_KD,65,85,39,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_POSITION_PID_D_FACTOR,110,85,40,14,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_POSITION_PID_D_FACTOR,155,85,40,
+                    14
+    LTEXT           "Max I Term:",IDC_STATIC,15,105,44,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "~MaxIValue~",IDC_STATIC_MAX_I_TERM,65,105,39,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_POSITION_PID_MAX_I_TERM,110,105,40,14,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_POSITION_PID_MAX_I_TERM,155,105,
+                    40,14
+    PUSHBUTTON      "Read All",IDC_BUTTON_READ_POSITION_PID_SETINGS,15,180,
+                    90,14
+    PUSHBUTTON      "Write All",IDC_BUTTON_POSITION_PID_WRITE_ALL,110,180,85,
+                    14
+    GROUPBOX        "Encoder:",IDC_STATIC,220,30,225,30
+    LTEXT           "Position:",IDC_STATIC,225,40,65,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "~Position~",IDC_STATIC_ENCODER,295,40,55,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_NEW_POSITION,355,40,40,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_NEW_POSITION,401,40,40,14
+    LTEXT           "SetVelocity(...):",IDC_STATIC,225,65,65,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "~SetVelocity~",IDC_STATIC_VELOCITY,295,65,55,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_SET_VELOCITY,355,65,40,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_VELOCITY,401,65,40,14
+    LTEXT           "SetAcceleration(...):",IDC_STATIC,225,85,65,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "~Acceleration~",IDC_STATIC_ACCELERATION,295,86,55,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_SET_ACCELERATION,355,86,40,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_ACCEL,401,86,40,14
+    GROUPBOX        "SetAccAndMaxVelocity(...):",IDC_STATIC,220,105,225,50
+    LTEXT           "SetAcceleration 2:",IDC_STATIC,225,115,65,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "~Acceleration2~",IDC_STATIC_ACCELERATION2,295,115,55,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_SET_ACCELERATION2,355,115,40,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "SetVelocity 2:",IDC_STATIC,225,135,65,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "~Velocity2~",IDC_STATIC_VELOCITY2,295,135,55,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_SET_MAX_VELOCITY2,355,135,40,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_MAX_ACC2_AND_VELOCITY2,401,115,
+                    40,35
+    LTEXT           "SetMaxSpeed(...):",IDC_STATIC,225,160,65,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "~MaxSpeed~",IDC_STATIC_MAX_SPEED,295,160,55,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_SET_MAX_SPEED,355,160,40,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_MAX_SPEED,401,160,40,14
+    LTEXT           "Max PID Out:",IDC_STATIC,225,180,65,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "~MaxPIDOut~",IDC_STATIC_MAX_PID_OUT,295,180,55,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_MAX_PID_OUT,355,180,40,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_MAX_PID_OUT,401,180,40,14
+    PUSHBUTTON      "Read All",IDC_BUTTON_SP_POSITION_READ_ALL,225,205,125,
+                    15
+    PUSHBUTTON      "Write All",IDC_BUTTON_SP_POSITION_WRITE_ALL,355,205,85,
+                    15
+    DEFPUSHBUTTON   "OK",IDOK,50,205,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,105,205,50,14
+    LTEXT           "Scale:",IDC_STATIC,15,125,44,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_POSITION_PID_SCALE,110,125,40,14,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_POSITION_PID_SCALE,155,125,40,
+                    14
+    CTEXT           "~Scale~",IDC_STATIC_POSITION_PID_SCALE,65,125,39,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DAC_CONST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 155
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_ADC_CONST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+    END
+
+    IDD_TCP_SETINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 120
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_SERVO_CONTROL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 445
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 229
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_MAIN MENU DISCARDABLE 
+BEGIN
+    POPUP "&ADC"
+    BEGIN
+        MENUITEM "&Const",                      ID_ADC_CONST
+    END
+    POPUP "&DAC"
+    BEGIN
+        MENUITEM "&Const",                      ID_DAC_CONST
+        POPUP "DAC0"
+        BEGIN
+            MENUITEM "From 0 To 65535",             ID_DAC_DAC0_DIRECTACCESS
+            MENUITEM "From 0.00 V To 10.00 V",      ID_DAC_DAC0_000VTO1000V
+        END
+        POPUP "DAC1"
+        BEGIN
+            MENUITEM "From 0 To 65535",             ID_DAC_DAC1_DIRECTACCESS
+            MENUITEM "From 0.00 V To 10.00 V",      ID_DAC_DAC1_000VTO1000V
+        END
+    END
+    POPUP "&Connection"
+    BEGIN
+        MENUITEM "&Setings",                    IDM_CONNECTION_SETINGS
+        , GRAYED
+        MENUITEM "&Disconnect",                 IDM_CONNECTION_DISCONNECT
+        , GRAYED
+        POPUP "&Connecto To"
+        BEGIN
+            MENUITEM "COM1",                        IDM_CONNECTION_COMSELECT_COM1
+
+            MENUITEM "COM2",                        IDM_CONNECTION_COMSELECT_COM2
+
+            MENUITEM "COM3",                        IDM_CONNECTION_COMSELECT_COM3
+
+            MENUITEM "COM4",                        IDM_CONNECTION_COMSELECT_COM4
+
+            MENUITEM "COM5",                        IDM_CONNECTION_COMSELECT_COM5
+
+            MENUITEM "COM6",                        IDM_CONNECTION_COMSELECT_COM6
+
+            MENUITEM "COM7",                        IDM_CONNECTION_COMSELECT_COM7
+
+            MENUITEM "COM8",                        IDM_CONNECTION_COMSELECT_COM8
+
+            MENUITEM "TCP/IP",                      IDM_CONNECTION_TCP_IP
+        END
+    END
+    MENUITEM "&Servo Control",              IDM_SERVO_CONTROL
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "About...",                    ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_IDE                 ICON    DISCARDABLE     "CHIP.ico"
+#endif    // Bulgarian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 111, 22, 274, 236
+STYLE WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ModBUS (For Board v.0.0.7)"
+MENU IDR_MENU_MAIN
+FONT 12, "Arial Unicode MS", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Read Digital Input:",IDC_STATIC,5,5,265,40
+    LTEXT           "I0: OFF",IDC_I0,15,15,30,10,WS_BORDER
+    LTEXT           "I1: OFF",IDC_I1,50,15,30,10,WS_BORDER
+    LTEXT           "I2: OFF",IDC_I2,85,15,30,10,WS_BORDER
+    LTEXT           "I3: OFF",IDC_I3,120,15,30,10,WS_BORDER
+    LTEXT           "I4: OFF",IDC_I4,155,15,30,10,WS_BORDER
+    LTEXT           "I5: OFF",IDC_I5,190,15,30,10,WS_BORDER
+    LTEXT           "I6: OFF",IDC_I6,225,15,30,10,WS_BORDER
+    LTEXT           "I7: OFF",IDC_I7,15,30,30,10,WS_BORDER
+    LTEXT           "I8: OFF",IDC_I8,50,30,30,10,WS_BORDER
+    LTEXT           "I9: OFF",IDC_I9,85,30,30,10,WS_BORDER
+    LTEXT           "FB0: 0",IDC_FB0,155,30,30,10,SS_CENTERIMAGE | WS_BORDER
+    LTEXT           "FB1: 0",IDC_FB1,190,30,30,10,SS_CENTERIMAGE | WS_BORDER
+    LTEXT           "FB2: 0",IDC_FB2,225,30,30,10,SS_CENTERIMAGE | WS_BORDER
+    LTEXT           "FB: 0",IDC_FB,120,30,30,10,SS_CENTERIMAGE | WS_BORDER
+    GROUPBOX        "Read Analog Input:",IDC_STATIC,5,50,265,55
+    LTEXT           " ADC[0] = 00.000V",IDC_ADC0,10,60,60,10,WS_BORDER
+    LTEXT           " ADC[1] = 00.000V",IDC_ADC1,75,60,60,10,WS_BORDER
+    LTEXT           " ADC[2] = 00.000V",IDC_ADC2,140,60,60,10,WS_BORDER
+    LTEXT           " ADC[3] = 00.000V",IDC_ADC3,205,60,60,10,WS_BORDER
+    LTEXT           " ADC[4] = 00.000V",IDC_ADC4,10,75,60,10,WS_BORDER
+    LTEXT           " ADC[5] = 00.000V",IDC_ADC5,75,75,60,10,WS_BORDER
+    LTEXT           " ADC[6] = 00.000V",IDC_ADC6,140,75,60,10,WS_BORDER
+    LTEXT           "temp",IDC_ADC7,205,75,60,10,WS_BORDER
+    CONTROL         "Direct Access",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,
+                    10,90,55,10
+    CONTROL         "1000",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,75,90,32,
+                    10
+    CONTROL         "10.00 V",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,140,90,
+                    40,10
+    CONTROL         "10.000 V",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,205,90,
+                    44,10
+    GROUPBOX        "Set Digital Output:",IDC_STATIC,5,110,265,50
+    PUSHBUTTON      "Q0",IDC_Q0,20,120,30,15,WS_GROUP,WS_EX_TRANSPARENT | 
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Q1",IDC_Q1,60,120,30,15,WS_GROUP,WS_EX_TRANSPARENT | 
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Q2",IDC_Q2,100,120,30,15,WS_GROUP,WS_EX_TRANSPARENT | 
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Q3",IDC_Q3,140,120,30,15,WS_DISABLED | WS_GROUP,
+                    WS_EX_TRANSPARENT | WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Q4",IDC_Q4,180,120,30,15,WS_GROUP,WS_EX_TRANSPARENT | 
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Q5",IDC_Q5,220,120,30,15,WS_GROUP,WS_EX_TRANSPARENT | 
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Q6",IDC_Q6,20,140,30,15,WS_GROUP,WS_EX_TRANSPARENT | 
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Q7",IDC_Q7,60,140,30,15,WS_GROUP,WS_EX_TRANSPARENT | 
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Q8",IDC_Q8,100,140,30,15,WS_GROUP,WS_EX_TRANSPARENT | 
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Q9",IDC_Q9,140,140,30,15,WS_GROUP,WS_EX_TRANSPARENT | 
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Q10",IDC_Q10,180,140,30,15,WS_GROUP,WS_EX_TRANSPARENT | 
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Q11",IDC_Q11,220,140,30,15,WS_GROUP,WS_EX_TRANSPARENT | 
+                    WS_EX_CLIENTEDGE
+    GROUPBOX        "Set Analgo Output:",IDC_STATIC,5,165,265,50
+    CONTROL         "Slider1",IDC_SLIDER_AO0,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,15,195,115,15,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Slider1",IDC_SLIDER_AO1,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,140,195,110,15,
+                    WS_EX_TRANSPARENT
+    COMBOBOX        IDC_COMBO_SLAVE_ID,140,220,35,95,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Slave ID:",IDC_STATIC,100,220,31,12,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_DAC0_VALUE,20,180,110,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_DAC1_VALUE,140,180,110,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

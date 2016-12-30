@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>AVR-LPC Demo Page</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="mchp.js" type="text/javascript"></script>
+</head>
+
+<script type="text/javascript">
+<!--
+// Parses the xmlResponse from status.xml and updates the status box
+function updateStatus(xmlData) {
+	//Check if a timeout occurred
+
+	document.getElementById('DI0').innerHTML = getXMLValue(xmlData, 'DI0');
+	document.getElementById('DI1').innerHTML = getXMLValue(xmlData, 'DI1');
+	document.getElementById('DI2').innerHTML = getXMLValue(xmlData, 'DI2');
+	document.getElementById('DI3').innerHTML = getXMLValue(xmlData, 'DI3');
+	document.getElementById('DI4').innerHTML = getXMLValue(xmlData, 'DI4');
+	document.getElementById('DI5').innerHTML = getXMLValue(xmlData, 'DI5');
+	document.getElementById('DI6').innerHTML = getXMLValue(xmlData, 'DI6');
+	document.getElementById('DI7').innerHTML = getXMLValue(xmlData, 'DI7');
+	document.getElementById('DI8').innerHTML = getXMLValue(xmlData, 'DI8');
+	document.getElementById('DI9').innerHTML = getXMLValue(xmlData, 'DI9');
+
+	document.getElementById('ENC_Step').innerHTML = getXMLValue(xmlData, 'ENC_Step');
+
+	document.getElementById('FB').innerHTML = getXMLValue(xmlData, 'FB');
+	document.getElementById('FB0').innerHTML = getXMLValue(xmlData, 'FB0');
+	document.getElementById('FB1').innerHTML = getXMLValue(xmlData, 'FB1');
+	document.getElementById('FB2').innerHTML = getXMLValue(xmlData, 'FB2');
+
+	document.getElementById('DO0').innerHTML = getXMLValue(xmlData, 'DO0');
+	document.getElementById('DO1').innerHTML = getXMLValue(xmlData, 'DO1');
+	document.getElementById('DO2').innerHTML = getXMLValue(xmlData, 'DO2');
+	document.getElementById('DO3').innerHTML = getXMLValue(xmlData, 'DO3');
+	document.getElementById('DO4').innerHTML = getXMLValue(xmlData, 'DO4');
+	document.getElementById('DO5').innerHTML = getXMLValue(xmlData, 'DO5');
+	document.getElementById('DO6').innerHTML = getXMLValue(xmlData, 'DO6');
+	document.getElementById('DO7').innerHTML = getXMLValue(xmlData, 'DO7');
+	document.getElementById('DO8').innerHTML = getXMLValue(xmlData, 'DO8');
+	document.getElementById('DO9').innerHTML = getXMLValue(xmlData, 'DO9');
+	document.getElementById('DO10').innerHTML = getXMLValue(xmlData, 'DO10');
+	document.getElementById('DO11').innerHTML = getXMLValue(xmlData, 'DO11');
+
+	document.getElementById('AI0').innerHTML = getXMLValue(xmlData, 'AI0');
+	document.getElementById('AI1').innerHTML = getXMLValue(xmlData, 'AI1');
+	document.getElementById('AI2').innerHTML = getXMLValue(xmlData, 'AI2');
+	document.getElementById('AI3').innerHTML = getXMLValue(xmlData, 'AI3');
+	document.getElementById('AI4').innerHTML = getXMLValue(xmlData, 'AI4');
+	document.getElementById('AI5').innerHTML = getXMLValue(xmlData, 'AI5');
+	document.getElementById('AI6').innerHTML = getXMLValue(xmlData, 'AI6');
+	
+	document.getElementById('AO0').innerHTML = getXMLValue(xmlData, 'AO0');
+	document.getElementById('AO1').innerHTML = getXMLValue(xmlData, 'AO1');
+
+	document.getElementById('T0').innerHTML = getXMLValue(xmlData, 'T0'); 
+}
+
+setTimeout("newAJAXCommand('status.xml', updateStatus, true)", 100);
+//-->
+</script>
+
+<body>
+<img id="logo" src="logo.gif" alt="doom"/>
+<div id="title">IO Module Demo Application<br/>
+</div>
+
+<div id="panels">
+
+ <div id="digital_in">
+    <div class="names">
+	DI0<span class="indicators" id="DI0">&bull;</span><br/>
+	DI1<span class="indicators" id="DI1">&bull;</span><br/>
+	DI2<span class="indicators" id="DI2">&bull;</span><br/>
+	DI3<span class="indicators" id="DI3">&bull;</span><br/>
+	DI4<span class="indicators" id="DI4">&bull;</span><br/>
+	DI5<span class="indicators" id="DI5">&bull;</span><br/>
+	DI6<span class="indicators" id="DI6">&bull;</span><br/>
+	DI7<span class="indicators" id="DI7">&bull;</span><br/>
+	DI8<span class="indicators" id="DI8">&bull;</span><br/>
+	DI9<span class="indicators" id="DI9">&bull;</span><br/>
+    </div>
+ </div>
+
+ <div id="digital_fb">
+    <div class="labels">
+        <u>Digital FB:</u><br /><br />
+	<div class="names">
+	FB<span class="indicators" id="FB">&bull;</span><br/>
+	FB0<span class="indicators" id="FB0">&bull;</span><br/>
+	FB1<span class="indicators" id="FB1">&bull;</span><br/>
+	FB2<span class="indicators" id="FB2">&bull;</span><br/>
+    </div>
+  </div>
+ </div>
+
+ <div id="enc_in">
+    <div class="labels">
+        <u>Encoder data:</u><br/><br />
+	    Step = <span id="ENC_Step">?</span><br/>
+    </div>
+ </div>
+
+ <div id="digital_out">
+     <div class="names">
+	DO0<span class="actuators"><a id="DO0" onclick="newAJAXCommand('do_togle?index=0');">&bull;</a></span><br/>
+	DO1<span class="actuators"><a id="DO1" onclick="newAJAXCommand('do_togle?index=1');">&bull;</a></span><br/> 
+	DO2<span class="actuators"><a id="DO2" onclick="newAJAXCommand('do_togle?index=2');">&bull;</a></span><br/> 
+	DO3<span class="actuators"><a id="DO3" onclick="newAJAXCommand('do_togle?index=3');">&bull;</a></span><br/> 
+	DO4<span class="actuators"><a id="DO4" onclick="newAJAXCommand('do_togle?index=4');">&bull;</a></span><br/> 
+	DO5<span class="actuators"><a id="DO5" onclick="newAJAXCommand('do_togle?index=5');">&bull;</a></span><br/> 
+	DO6<span class="actuators"><a id="DO6" onclick="newAJAXCommand('do_togle?index=6');">&bull;</a></span><br/> 
+	DO7<span class="actuators"><a id="DO7" onclick="newAJAXCommand('do_togle?index=7');">&bull;</a></span><br/> 
+	DO8<span class="actuators"><a id="DO8" onclick="newAJAXCommand('do_togle?index=8');">&bull;</a></span><br/> 
+	DO9<span class="actuators"><a id="DO9" onclick="newAJAXCommand('do_togle?index=9');">&bull;</a></span><br/> 
+	DO10<span class="actuators"><a id="DO10" onclick="newAJAXCommand('do_togle?index=10');">&bull;</a></span><br/> 
+	DO11<span class="actuators"><a id="DO11" onclick="newAJAXCommand('do_togle?index=11');">&bull;</a></span><br/> 
+     </div>
+ </div>
+
+ <div id="analog_in">
+    <div class="labels">
+        <u>Analog inputs raw data:</u><br /><br />
+	    AI0 = <span id="AI0">?</span><br/>
+	    AI1 = <span id="AI1">?</span><br/>
+	    AI2 = <span id="AI2">?</span><br/>
+	    AI3 = <span id="AI3">?</span><br/>
+	    AI4 = <span id="AI4">?</span><br/>
+	    AI5 = <span id="AI5">?</span><br/>
+	    AI6 = <span id="AI6">?</span><br/>
+	    <br>t&ordm; = <span id="T0">?</span> &ordm;C<br/>
+    </div>
+ </div>
+
+ <div id="analog_out">
+	<div class="labels">
+		<u>Analog outputs raw data:</u><br /><br />
+		AO0 = <span id="AO0">?</span><br/>
+		AO1 = <span id="AO1">?</span><br/>
+    </div>
+ </div>
+
+ </div>
+
+<div class="spacer">&nbsp;</div>
+<div id="footer">Copyright &copy; 2013 Simeon S. Ivanov. AVR-LPC v.0.0.7</div>
+</body>
+</html>

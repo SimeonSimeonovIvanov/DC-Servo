@@ -1,0 +1,418 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Bulgarian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_BGR)
+#ifdef _WIN32
+LANGUAGE LANG_BULGARIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  22, 17, 154, 66
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About DC Servo"
+FONT 8, "System"
+BEGIN
+    LTEXT           "DC Servo v.0.0.0",IDC_STATIC,30,5,56,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2007-14",IDC_STATIC,30,15,75,8
+    DEFPUSHBUTTON   "OK",IDOK,115,10,30,10,WS_GROUP
+    LTEXT           "e-mail: simeon_s._ivanov@abv.bg",IDC_STATIC,30,49,120,
+                    11
+    LTEXT           "By Simeon S. Ivanov",IDC_STATIC,30,30,69,8
+    ICON            IDI_IDE,IDI_IDE,5,5,20,20
+END
+
+IDD_TCP_SETINGS DIALOG DISCARDABLE  0, 0, 112, 91
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "TCP Setings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,10,70,40,14
+    PUSHBUTTON      "Cancel",IDCANCEL,60,70,40,14
+    CONTROL         "IPAddress1",IDC_IPADDRESS,"SysIPAddress32",WS_TABSTOP,5,
+                    14,100,15
+    EDITTEXT        IDC_EDIT_TCP_PORT,5,45,99,15,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "IP Address:",IDC_STATIC,5,5,37,8
+    LTEXT           "Port:",IDC_STATIC,5,35,16,8
+END
+
+IDD_DIALOG_PID_SETTINGS DIALOGEX 0, 0, 332, 211
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+CAPTION "PID Settings:"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,95,190,45,14
+    PUSHBUTTON      "Cancel",IDCANCEL,185,190,45,14
+    LTEXT           "int16_t P_Factor:",IDC_STATIC,5,45,85,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    LTEXT           "int16_t I_Factor:",IDC_STATIC,5,65,85,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    LTEXT           "int16_t D_Factor:",IDC_STATIC,5,85,85,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    LTEXT           "int16_t maxError:",IDC_STATIC,5,105,85,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    LTEXT           "int32_t maxSumError:",IDC_STATIC,5,125,85,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    LTEXT           "int16_t lastProcessValue:",IDC_STATIC,5,5,85,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    LTEXT           "int32_t sumError:",IDC_STATIC,5,25,85,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_PID_CURRENT_LAST_PROCESS_VALUE,130,5,30,15,
+                    ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT_PID_CURRENT_SUM_ERROR,130,25,30,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT_PID_CURRENT_P_FACTOR,130,45,30,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PID_CURRENT_I_FACTOR,130,65,30,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PID_CURRENT_D_FACTOR,130,85,30,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PID_CURRENT_MAX_ERROR,130,105,30,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PID_CURRENT_MAX_SUM_ERROR,130,125,30,15,
+                    ES_CENTER | ES_AUTOHSCROLL
+    CTEXT           "Static",IDC_STATIC_PID_CURRENT_LAST_PROCESS_VALUE,95,5,
+                    30,15,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_PID_CURRENT_SUM_ERROR,95,25,30,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_PID_CURRENT_P_FACTOR,95,45,30,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_PID_CURRENT_I_FACTOR,95,65,30,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_PID_CURRENT_D_FACTOR,95,85,30,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_PID_CURRENT_MAX_ERROR,95,105,30,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_PID_CURRENT_MAX_SUM_ERROR,95,125,30,
+                    15,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    PUSHBUTTON      "Read All",IDC_BUTTON_READ_PID_ALL_SETINGS,95,170,85,14
+    PUSHBUTTON      "Write All",IDC_BUTTON_PID_WRITE_ALL_SETTINGS,185,170,85,
+                    14
+    PUSHBUTTON      "Write",IDC_BUTTON_PID_CURRENT_WRITE_LAST_PROCES_VALUE,
+                    165,5,30,14
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_PID_CURRENT_SUM_ERROR,165,25,30,
+                    14
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_PID_CURRENT_P_FACTOR,165,45,30,
+                    14
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_PID_CURRENT_I_FACTOR,165,65,30,
+                    14
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_PID_CURRENT_D_FACTOR,165,85,30,
+                    14
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_PID_CURRENT_MAX_ERROR,165,105,
+                    30,14
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_PID_CURRENT_MAX_SUM_ERROR,165,
+                    125,30,14
+    LTEXT           "SCALING_FACTOR:",IDC_STATIC,5,145,85,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_PID_CURRENT_SCALING_FACTOR,130,145,30,15,
+                    ES_CENTER | ES_AUTOHSCROLL
+    CTEXT           "Static",IDC_STATIC_PID_CURRENT_SCALING_FACTOR,95,145,30,
+                    15,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_PID_CURRENT_SCALING_FACTOR,165,
+                    145,30,14
+    EDITTEXT        IDC_EDIT_PID_CURRENT_LAST_PROCESS_VALUE2,250,5,30,15,
+                    ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT_PID_CURRENT_SUM_ERROR2,250,25,30,15,ES_CENTER | 
+                    ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT_PID_SPEED_P_FACTOR,250,45,30,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PID_SPEED_I_FACTOR,250,65,30,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PID_SPEED_D_FACTOR,250,85,30,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PID_SPEED_MAX_ERROR,250,105,30,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PID_SPEED_MAX_SUM_ERROR,250,125,30,15,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    CTEXT           "Static",IDC_STATIC_PID_SPEED_LAST_PROCESS_VALUE,215,5,
+                    30,15,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_PID_SPEED_SUM_ERROR,215,25,30,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_PID_SPEED_P_FACTOR,215,45,30,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_PID_SPEED_I_FACTOR,215,65,30,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_PID_SPEED_D_FACTOR,215,85,30,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_PID_SPEED_MAX_ERROR,215,105,30,15,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_PID_SPEED_MAX_SUM_ERROR,215,125,30,
+                    15,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    PUSHBUTTON      "Write",IDC_BUTTON_PID_SPEED_WRITE_LAST_PROCES_VALUE,285,
+                    5,30,14
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_PID_SPEED_SUM_ERROR,285,25,30,
+                    14
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_PID_SPEED_P_FACTOR,285,45,30,14
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_PID_SPEED_I_FACTOR,285,65,30,14
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_PID_SPEED_D_FACTOR,285,85,30,14
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_PID_SPEED_MAX_ERROR,285,105,30,
+                    14
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_PID_SPEED_MAX_SUM_ERROR,285,125,
+                    30,14
+    EDITTEXT        IDC_EDIT_PID_SPEED_SCALING_FACTOR,250,145,30,15,
+                    ES_CENTER | ES_AUTOHSCROLL
+    CTEXT           "Static",IDC_STATIC_PID_SPEED_SCALING_FACTOR,215,145,30,
+                    15,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    PUSHBUTTON      "Write",IDC_BUTTON_WRITE_PID_SPEED_SCALING_FACTOR,285,
+                    145,30,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_TCP_SETINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 105
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_DIALOG_PID_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 325
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 204
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_MAIN MENU DISCARDABLE 
+BEGIN
+    POPUP "&Connection"
+    BEGIN
+        MENUITEM "&Setings",                    IDM_CONNECTION_SETINGS
+        , GRAYED
+        MENUITEM "&Disconnect",                 IDM_CONNECTION_DISCONNECT
+        , GRAYED
+        POPUP "&Connect To"
+        BEGIN
+            MENUITEM "COM1",                        IDM_CONNECTION_COMSELECT_COM1
+
+            MENUITEM "COM2",                        IDM_CONNECTION_COMSELECT_COM2
+
+            MENUITEM "COM3",                        IDM_CONNECTION_COMSELECT_COM3
+
+            MENUITEM "COM4",                        IDM_CONNECTION_COMSELECT_COM4
+
+            MENUITEM "COM5",                        IDM_CONNECTION_COMSELECT_COM5
+
+            MENUITEM "COM6",                        IDM_CONNECTION_COMSELECT_COM6
+
+            MENUITEM "COM7",                        IDM_CONNECTION_COMSELECT_COM7
+
+            MENUITEM "COM8",                        IDM_CONNECTION_COMSELECT_COM8
+
+            MENUITEM "TCP/IP",                      IDM_CONNECTION_TCP_IP
+        END
+    END
+    POPUP "&Settings"
+    BEGIN
+        MENUITEM "&PID Settings",               ID_PID_SETTINGS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "About...",                    ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_IDE                 ICON    DISCARDABLE     "CHIP.ico"
+#endif    // Bulgarian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 0, 150, 309, 146
+STYLE WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "DC Servo - ModBUS Control Center"
+MENU IDR_MENU_MAIN
+FONT 12, "Arial Unicode MS"
+BEGIN
+    PUSHBUTTON      "EMS (Q0)",IDC_Q0,5,135,300,10
+    CTEXT           "Static",IDC_STATIC_FB_CURRENT,55,15,45,10,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_SP_CURRENT,5,15,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_SP_SPEED,160,15,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_PID_CURRENT_OUT,105,15,45,10,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_OCR1A,55,65,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_OCR1B,105,65,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "SP Current:",IDC_STATIC,5,5,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "FB Current:",IDC_STATIC,55,5,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "SP Speed:",IDC_STATIC,160,5,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "PID Out:",IDC_STATIC,105,5,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "OCR1A:",IDC_STATIC,55,55,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "OCR1B:",IDC_STATIC,105,55,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "~I0~",IDC_I0,5,95,45,10,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "~I1~",IDC_I1,55,95,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "~I2~",IDC_I2,105,95,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "~I3~",IDC_I3,155,95,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "Ready:",IDC_STATIC,5,85,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "ON:",IDC_STATIC,55,85,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "F/!B",IDC_STATIC,105,85,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "DI1:",IDC_STATIC,155,85,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "DI2:",IDC_STATIC,205,85,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "DI3",IDC_STATIC,255,85,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "~I4~",IDC_I4,205,95,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "~I5~",IDC_I5,255,95,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "~Q2~",IDC_Q2,55,120,45,10
+    PUSHBUTTON      "~Q3~",IDC_Q3,105,120,45,9
+    CTEXT           "Force ON:",IDC_STATIC,55,110,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "Force F/!B:",IDC_STATIC,105,110,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "~Q1~",IDC_Q1,5,120,45,9
+    CTEXT           "Reset:",IDC_STATIC,5,110,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_FB_SPEED,210,15,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "FB Speed:",IDC_STATIC,210,5,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_PID_SPEED_OUT,260,15,45,10,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "PID Out:",IDC_STATIC,260,5,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_CURRENT_LIMIT_SP,5,40,145,10,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "SP Current Limit ( arrADC[2] ):",IDC_STATIC,5,30,145,10,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    PUSHBUTTON      "~Q4~",IDC_Q4,155,120,45,10
+    CTEXT           "CC or CS:",IDC_STATIC,155,110,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "Static",IDC_STATIC_PWM,5,65,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CTEXT           "PWM:",IDC_STATIC,5,55,45,10,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAIN, DIALOG
+    BEGIN
+        RIGHTMARGIN, 305
+        BOTTOMMARGIN, 145
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

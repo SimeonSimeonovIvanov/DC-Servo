@@ -1,0 +1,1 @@
+LRESULT CALLBACK ServoControlWndProc( HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam );

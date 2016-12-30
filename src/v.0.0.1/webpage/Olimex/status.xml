@@ -1,0 +1,17 @@
+<response>
+<led1>~led(1)~</led1>
+<led2>~led(2)~</led2>
+<led3>~led(3)~</led3>
+<r1>~relay(1)~</r1>
+<r2>~relay(2)~</r2>
+<btn1>~btn(1)~</btn1>
+<btn2>~btn(2)~</btn2>
+<btn3>~btn(3)~</btn3>
+<din1>~din(1)~</din1>
+<din2>~din(2)~</din2>
+<pot0>~pot~</pot0>
+<accX>~accX~</accX>
+<accY>~accY~</accY>
+<accZ>~accZ~</accZ>
+<accT>~accT~</accT>
+</response>

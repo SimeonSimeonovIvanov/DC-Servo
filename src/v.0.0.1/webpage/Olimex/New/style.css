@@ -1,0 +1,135 @@
+body {
+	font-family: Verdana, Arial, sans-serif;
+	margin: 0px auto;
+	padding: 0 0 20px 0;
+	background-color: #000;
+}
+
+#logo
+{
+	display: block;
+	margin-left:auto;
+	margin-right:auto;
+	padding: 20px;
+}
+
+#title {
+	padding: 4px;
+	font-weight: bold;
+	color: #fff;
+	margin-bottom: 15px;
+	margin-left: 20px;
+	height: 50px;
+	width: 80%;
+	text-align: left;
+	background-color: #03C;
+}
+
+.spacer {
+	clear: both;
+}
+
+#footer {
+	font-size: 0.8em;
+	color: #666;
+	text-align: center;
+	margin: 10px 50px 0 50px;
+	padding-top: 10px;
+	border-top: 1px dotted #666;
+	position: absolute;
+	top: 600px;
+}
+
+#panels {
+	color:#fff;
+}
+
+#buttons {
+	border-style:groove;
+	border-width:10px;
+	border-color:#98bf21;
+	width:130px;
+	height:120px;
+	padding:20px;
+	background-color: #333;
+	position: absolute;
+	left: 50px;
+	top: 200px;
+}
+
+#digins {
+	width:150px;
+	height:80px;
+	padding:20px;
+	background-color: #333;
+	border: 10px groove #3FF;
+	position: absolute;
+	top: 430px;
+	left: 80px;
+}
+
+#leds {
+	width:150px;
+	height:120px;
+	padding:20px;
+	background-color: #333;
+	border: 10px groove #F33;
+	position: absolute;
+	left: 400px;
+	top: 190px;
+}
+
+#relays {
+	width:130px;
+	height:80px;
+	padding:20px;
+	background-color: #333;
+	border: 10px groove #FF0;
+	position: absolute;
+	left: 420px;
+	top: 450px;
+}
+
+#accel {
+	width:180px;
+	height:100px;
+	padding:20px;
+	background-color: #333;
+	border: 10px groove #03F;
+	position: absolute;
+	left: 700px;
+	top: 230px;
+}
+
+#pot {
+	width:180px;
+	height:60px;
+	padding:20px;
+	background-color: #333;
+	border: 10px groove #FFF;
+	position: absolute;
+	left: 680px;
+	top: 450px;
+}
+
+.names {
+	font-size: 25px;
+	font-weight: bolder;
+	line-height: 40px;
+}
+
+.indicators {
+	color:#F00;
+	font-size: 30px;
+	margin-left: 50px;
+}
+
+.actuators {
+	color:#F00;
+	font-size: 30px;
+	margin-left: 50px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+
