@@ -4,5 +4,8 @@
 [DC Servo - Pulse Testing](https://www.youtube.com/watch?v=2nZXUcoeyds)<br>
 [Images](https://photos.google.com/share/AF1QipMzZ-ynxjgMDZ_RqFM_1IZ0rQbRRlL92HL_IAoDkJfIh321sr6dbftCyruxnr1hNQ?key=cER3Vl9FUmRDOUMzNWs2Z3FKUy1qcHFIYlNoUGlB)<br>
 
-Current PI Loop, FB signal:
+Analog Current PI Loop, FB signal:
 ![Screen Shot](https://raw.githubusercontent.com/SimeonSimeonovIvanov/DC-Servo/master/Work/Simulation/Current%20PI%20Loop/Current%20PI%20Loop%20(Test%201)%20-%20FB.png)<br>
+
+Current PWM (Digital):
+![Screen Shot](https://raw.githubusercontent.com/SimeonSimeonovIvanov/DC-Servo/master/Work/Simulation/CURRENT%20PWM/CURRENT%20PWM%20and%20DC%20Motor.png)<br>
