@@ -5,4 +5,4 @@
 [Images](https://photos.google.com/share/AF1QipMzZ-ynxjgMDZ_RqFM_1IZ0rQbRRlL92HL_IAoDkJfIh321sr6dbftCyruxnr1hNQ?key=cER3Vl9FUmRDOUMzNWs2Z3FKUy1qcHFIYlNoUGlB)<br>
 
 Current PI Loop, FB signal:
-[Images](https://raw.githubusercontent.com/SimeonSimeonovIvanov/DC-Servo/master/Work/Simulation/Current%20PI%20Loop/Current%20PI%20Loop%20(Test%201)%20-%20FB.png)<br>
+![Screen Shot](https://raw.githubusercontent.com/SimeonSimeonovIvanov/DC-Servo/master/Work/Simulation/Current%20PI%20Loop/Current%20PI%20Loop%20(Test%201)%20-%20FB.png)<br>
