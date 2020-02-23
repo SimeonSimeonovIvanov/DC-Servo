@@ -34,11 +34,14 @@ DC Servo - Playlist
 РУСЕ,
 2014г."
 
-http://mcu-bg.com/mcu_site/viewtopic.php?p=281388#p281388:<br>
+http://mcu-bg.com/mcu_site/viewtopic.php?p=281388#p281388:
+
 "Малко симулации направени по време на разработката / Git: DC-Servo /:
 Analog Current PI Loop, FB signal:"
 
 Analog Current PI Loop, FB signal:
+
+
 ![Screen Shot](https://raw.githubusercontent.com/SimeonSimeonovIvanov/DC-Servo/master/Work/Simulation/Current%20PI%20Loop/Current%20PI%20Loop%20(Test%201)%20-%20FB.png)<br>
 
 Current PWM (Digital):
