@@ -5,7 +5,7 @@
 [DC Servo - Pulse Testing](https://www.youtube.com/watch?v=2nZXUcoeyds)<br>
 [Images](https://photos.google.com/share/AF1QipMzZ-ynxjgMDZ_RqFM_1IZ0rQbRRlL92HL_IAoDkJfIh321sr6dbftCyruxnr1hNQ?key=cER3Vl9FUmRDOUMzNWs2Z3FKUy1qcHFIYlNoUGlB)<br>
 
-http://mcu-bg.com/mcu_site/viewtopic.php?p=176662#p176662
+http://mcu-bg.com/mcu_site/viewtopic.php?p=176662#p176662:<br>
 "Здравейте,
 
 Покрай РОБКО 01 започнах разработка на аналогово DC Servo или по-точно серво усилвател управляващ постояннотоков мотор по скорост. Следващата стъпка е добавяне на Motion Controler. За момента преправям готов код но ще мине доста време до първите тестове.
@@ -34,8 +34,7 @@ DC Servo - Playlist
 РУСЕ,
 2014г."
 
-http://mcu-bg.com/mcu_site/viewtopic.php?p=281388#p281388
-
+http://mcu-bg.com/mcu_site/viewtopic.php?p=281388#p281388:<br>
 "Малко симулации направени по време на разработката / Git: DC-Servo /:
 Analog Current PI Loop, FB signal:"
 
