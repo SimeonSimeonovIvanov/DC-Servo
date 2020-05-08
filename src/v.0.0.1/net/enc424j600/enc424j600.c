@@ -703,7 +703,7 @@ uint16_t enc424j600ExecuteOp16(uint8_t op, uint16_t data)
  */
 uint32_t enc424j600ExecuteOp32(uint8_t op, uint32_t data)
 {
-	uint16_t returnValue;
+	uint32_t returnValue;
 
 	select_net_chip();
 
