@@ -38,7 +38,7 @@
  */
 void spi_init()
 {
-	if(!(SPCR & (1 << SPE))) {
+	if( !(SPCR & (1 << SPE)) ) {
 		/* configure pins */
 		spi_config_pin_mosi();
 		spi_config_pin_sck();
@@ -56,9 +56,9 @@ void spi_init()
  */
 void spi_send_byte(uint8_t b)
 {
-    SPDR = b;
-    /* wait for byte to be shifted out */
-    while(!(SPSR & (1 << SPIF)));
+	SPDR = b;
+	/* wait for byte to be shifted out */
+	while(!(SPSR & (1 << SPIF)));
 }
 
 /**
@@ -68,11 +68,11 @@ void spi_send_byte(uint8_t b)
  */
 uint8_t spi_rec_byte()
 {
-    /* send dummy data for receiving some */
-    SPDR = 0xff;
-    while(!(SPSR & (1 << SPIF)));
+	/* send dummy data for receiving some */
+	SPDR = 0xff;
+	while(!(SPSR & (1 << SPIF)));
 
-    return SPDR;
+	return SPDR;
 }
 
 /**
@@ -83,16 +83,13 @@ uint8_t spi_rec_byte()
  */
 void spi_send_data(const uint8_t* data, uint16_t data_len)
 {
-    do
-    {
-        uint8_t b = *data++;
+	do {
+		uint8_t b = *data++;
+		while( !(SPSR & (1 << SPIF)) );
+		SPDR = b;
+	} while( --data_len );
 
-        while(!(SPSR & (1 << SPIF)));
-        SPDR = b;
-
-    } while(--data_len);
-
-    while(!(SPSR & (1 << SPIF)));
+	while( !(SPSR & (1 << SPIF)) );
 }
 
 /**
@@ -103,17 +100,14 @@ void spi_send_data(const uint8_t* data, uint16_t data_len)
  */
 void spi_rec_data(uint8_t* buffer, uint16_t buffer_len)
 {
-    --buffer;
+	--buffer;
 
-    do
-    {
-        SPDR = 0xff;
-        ++buffer;
-
-        while(!(SPSR & (1 << SPIF)));
-        *buffer = SPDR;
-
-    } while(--buffer_len);
+	do {
+		SPDR = 0xff;
+		++buffer;
+		while( !(SPSR & (1 << SPIF)) );
+		*buffer = SPDR;
+	} while( --buffer_len );
 }
 
 /**
@@ -137,7 +131,7 @@ void spi_low_frequency()
  */
 void spi_high_frequency()
 {
-    SPCR =	(0<<SPIE) | /* SPI Interrupt Enable */
+	SPCR =	(0<<SPIE) | /* SPI Interrupt Enable */
 			(1<<SPE)  | /* SPI Enable */
 			(0<<DORD) | /* Data Order: MSB first */
 			(1<<MSTR) | /* Master mode */

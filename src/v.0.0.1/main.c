@@ -164,7 +164,7 @@
 #define REG_DISC_START							1
 #define REG_DISC_SIZE							32
 
-unsigned char ucRegDiscBuf[REG_DISC_SIZE / 8] = { 0, 0 };
+unsigned char ucRegDiscBuf[REG_DISC_SIZE / 8];
 
 /* ------------------------------------------------------------------------------------------
 		Байтова карта на бобините за четене/запис:
@@ -182,7 +182,7 @@ unsigned char ucRegDiscBuf[REG_DISC_SIZE / 8] = { 0, 0 };
 // MB_FUNC_WRITE_SINGLE_COIL					( 5 )
 // MB_FUNC_WRITE_MULTIPLE_COILS					( 15 )
 #define REG_COILS_START							1
-#define REG_COILS_SIZE							24
+#define REG_COILS_SIZE							32
 
 uint8_t ucRegCoilsBuf[REG_COILS_SIZE / 8];
 
@@ -208,11 +208,11 @@ uint8_t ucRegCoilsBuf[REG_COILS_SIZE / 8];
 	-----------------------------------------------------------------------------------------
 	WORD_19[38:39]: [LSB0:MSB1] Optical Encoder COUNTER
 	WORD_20[40:41]: [LSB2:MSB3] Optical Encoder COUNTER
-
+	-----------------------------------------------------------------------------------------
 */
 // MB_FUNC_READ_INPUT_REGISTER					(  4 )
 #define REG_INPUT_START							1
-#define REG_INPUT_NREGS							42
+#define REG_INPUT_NREGS							50
 
 uint16_t uiRegInputBuf[REG_INPUT_NREGS];
 uint8_t usRegInputStart = REG_INPUT_START;
@@ -610,19 +610,21 @@ int main()
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		readADC();
 
-		for(i = 0; i < 7; i++) {
-		//	uiRegInputBuf[7 + i] = (10000.0 * (float)arrADC[i]) / ((float)uiRegHolding[5 + i]);
+		memcpy( uiRegInputBuf, (void*)&arrADC, sizeof( arrADC ) );
+
+		for( i = 0; i < 7; i++ ) {
+		//	uiRegInputBuf[7 + i] = ( 10000 * (uint32_t)arrADC[i]) / (uiRegHolding[5 + i] );
 		}
 
 		n = 0;
 		for(i = 14; i < 18; i++) {
 			uiRegInputBuf[i] = 0x00ff & (uiRegInputBuf[++n] / 10);
 			if( ++n < 14 ) {
-				uiRegInputBuf[i] |= (0xff00 & ((uiRegInputBuf[n] / 10)<<8));
+				uiRegInputBuf[i] |= ( 0xff00 & ((uiRegInputBuf[n] / 10)<<8) );
 			}
 		}
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		readDigitalInput((uint8_t*)inPort);
+		readDigitalInput( (uint8_t*)inPort );
 
 		uiRegInputBuf[18] &= 0xff00;
 		uiRegInputBuf[18] |= readAddressSwitch();

@@ -65,15 +65,15 @@ struct tcp_queue
     /** The receive ring header. */
     struct tcp_queue_head rx_head;
     /** The receive buffer. */
-    uint8_t rx_buffer[1500]; //TCP_RECEIVE_BUFFER_SIZE];
+    uint8_t rx_buffer[ TCP_RECEIVE_BUFFER_SIZE ];
 
     /** The transmit ring header. */
     struct tcp_queue_head tx_head;
     /** The transmit buffer. */
-    uint8_t tx_buffer[1500]; //TCP_TRANSMIT_BUFFER_SIZE];
+    uint8_t tx_buffer[ TCP_TRANSMIT_BUFFER_SIZE ];
 };
 
-static struct tcp_queue tcp_queue_queues[TCP_MAX_CONNECTION_COUNT];
+static struct tcp_queue tcp_queue_queues[ TCP_MAX_CONNECTION_COUNT ];
 
 static uint16_t tcp_queue_put(struct tcp_queue_head* queue_head, const uint8_t* data, uint16_t data_len);
 static uint16_t tcp_queue_get(struct tcp_queue_head* queue_head, uint8_t* buffer, uint16_t buffer_len);

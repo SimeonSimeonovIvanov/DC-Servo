@@ -1,5 +1,5 @@
 /*
-		The^day^of^DooM
+		simeon_s._ivanov@abv.bg
 
 	Create Date:	07.10.2010
 	Last Update:	10.10.2010

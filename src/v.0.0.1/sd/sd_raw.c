@@ -360,10 +360,7 @@ uint8_t sd_raw_read(uint32_t offset, uint8_t* buffer, uint16_t length)
 	uint16_t block_offset;
 	uint16_t read_length;
 
-	//spi_high_frequency(); // ???
-
-	while(length > 0)
-	{
+	while(length > 0) {
 		/* determine byte count to read at once */
 		block_address = offset & 0xfffffe00;
 		block_offset = offset & 0x01ff;
@@ -394,13 +391,12 @@ uint8_t sd_raw_read(uint32_t offset, uint8_t* buffer, uint16_t length)
 
 			/* wait for data block (start byte 0xfe) */
 			uint16_t i;
-			for(i = 0; i < 0x1fff; ++i)
-			{
-				if(spi_rec_byte() == 0xfe)
+			for( i = 0; i < 0x1fff; ++i ) {
+				if(spi_rec_byte() == 0xfe) {
 					break;
+				}
 			}
-			if(i >= 0x1fff)
-			{
+			if( i >= 0x1fff ) {
 				unselect_card();
 				spi_rec_byte();
 				return 0;

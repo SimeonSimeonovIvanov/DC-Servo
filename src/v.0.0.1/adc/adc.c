@@ -1,5 +1,5 @@
 /*
-		The^day^of^DooM
+		simeon_s._ivanov@abv.bg
 
 	Create Date:	07.10.2010
 	Last Update:	10.10.2010
@@ -16,13 +16,12 @@
 			This File:
 	Create Date:	07.11.2011
 	Last Update:	16.11.2011
+	Last Update:	16.08.2015 - For Board v.0.0.8
+	Last Update:	23.08.2015
 */
 
 #include "adc.h"
 #include <string.h>
-//#include "../adc_driver/adc_driver.h"
-
-extern uint16_t uiRegInputBuf[];
 extern uint16_t arrADC[7];
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -51,22 +50,20 @@ void readADC(void)
 		0, 4
 	};
 
-	for(i = 0; i < 7; i++) {	
+	for( i = 0; i < 7; i++ ) {	
 		arrTemp[i] = readAdcChannel(i);
 	}
 
-	for(i = 0; i < 7; i++) {
-		uiRegInputBuf[i] = arrTemp[index[i]];
+	for( i = 0; i < 7; i++ ) {
+		arrADC[i] = arrTemp[ index[i] ];
 	}
-
-	memcpy( arrADC, uiRegInputBuf, sizeof(arrADC) );
 }
 
-int16_t readAdcChannel(unsigned char n)
+uint16_t readAdcChannel( uint8_t n )
 {
-	unsigned int msb, lsb;
+	volatile uint16_t msb, lsb;
 
-	char cmd[7] = {
+	uint8_t cmd[7] = {
 		0b10001100,	// CH0 CH7/COM
 		0b10011100,	// CH2 CH7/COM
 		0b10101100,	// CH4 CH7/COM
@@ -75,18 +72,20 @@ int16_t readAdcChannel(unsigned char n)
 		0b11011100,	// CH3 CH7/COM
 		0b11101100	// CH5 CH7/COM
 	};
-
+	
 	select_analog_in();
+	SPCR |= (1<<SPR0);
 
 	SPDR = cmd[n];
-    while(!(SPSR & (1 << SPIF)));
-    msb = SPDR;
+	while( !( SPSR & (1 << SPIF) ) );
+	msb = SPDR;
 
 	SPDR = 0;
-    while(!(SPSR & (1 << SPIF)));
-    lsb = SPDR;
+	while( !( SPSR & (1 << SPIF) ) );
+	lsb = SPDR;
 
+	SPCR &= ~(1<<SPR0);
 	unselect_analog_in();
-
+	
 	return ( (0x0ff0 & (msb<<4)) | (0x000f & (lsb>>4)) );
 }

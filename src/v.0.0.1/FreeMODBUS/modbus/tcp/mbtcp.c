@@ -105,9 +105,9 @@ eMBErrorCode
 eMBTCPReceive( UCHAR * pucRcvAddress, UCHAR ** ppucFrame, USHORT * pusLength )
 {
 	eMBErrorCode	eStatus = MB_EIO;
-	UCHAR		  *pucMBTCPFrame;
-	USHORT		  usLength;
-	USHORT		  usPID;
+	UCHAR			*pucMBTCPFrame;
+	USHORT			usLength;
+	USHORT			usPID;
 
 	if( xMBTCPPortGetRequest( &pucMBTCPFrame, &usLength ) != FALSE )
 	{
@@ -146,7 +146,7 @@ eMBTCPSend( UCHAR _unused, const UCHAR * pucFrame, USHORT usLength )
 	 * header includes the size of the Modbus PDU and the UID Byte. Therefore 
 	 * the length is usLength plus one.
 	 */
-	pucMBTCPFrame[MB_TCP_LEN] = ( usLength + 1 ) >> 8U;
+	pucMBTCPFrame[MB_TCP_LEN + 0] = ( usLength + 1 ) >> 8U;
 	pucMBTCPFrame[MB_TCP_LEN + 1] = ( usLength + 1 ) & 0xFF;
 	if( xMBTCPPortSendResponse( pucMBTCPFrame, usTCPLength ) == FALSE )
 	{

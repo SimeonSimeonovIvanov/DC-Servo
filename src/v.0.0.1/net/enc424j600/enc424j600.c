@@ -22,8 +22,10 @@
 
 #include <avr/sfr_defs.h>
 
-#include "enc424j600.h"
+
 #include "../../arch/spi.h"
+
+#include "enc424j600.h"
 
 // Binary constant identifiers for ReadMemoryWindow() and WriteMemoryWindow()
 // functions
@@ -55,11 +57,7 @@ void enc424j600Init(uint8_t *mac_addr)
 	currentBank = 0;
 	unselect_net_chip();
 
-	//sbi(ENC424J600_SPI_PORT, ENC424J600_SPI_SCK);
-	//sbi(ENC424J600_SPI_DDR, ENC424J600_SPI_SCK);
 
-	//sbi(ENC424J600_SPI_DDR, ENC424J600_SPI_MOSI);
-	//cbi(ENC424J600_SPI_DDR, ENC424J600_SPI_MISO);
 
 	enc424j600_spi_set();
 
@@ -139,7 +137,7 @@ void enc424j600SendSystemReset(void)
  */
 char enc424j600MACIsLinked(void)
 {
-	return (enc424j600ReadReg(ESTAT) & ESTAT_PHYLNK) != 0u;
+	return ( 0 != ( ESTAT_PHYLNK & enc424j600ReadReg( ESTAT ) ) );
 }
 
 /**
@@ -148,7 +146,7 @@ char enc424j600MACIsLinked(void)
  */
 char enc424j600MACIsTxReady(void)
 {
-	return !(enc424j600ReadReg(ECON1) & ECON1_TXRTS);
+	return !( ECON1_TXRTS & enc424j600ReadReg(ECON1) );
 }
 
 char enc424j600PacketSend(uint8_t* packet, uint16_t len)

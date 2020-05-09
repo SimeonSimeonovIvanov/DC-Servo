@@ -1,5 +1,5 @@
 /*
-		The^day^of^DooM
+		simeon_s._ivanov@abv.bg
 
 	Create Date:	07.10.2010
 	Last Update:	10.10.2010
@@ -31,6 +31,6 @@
 
 void initAdc(void);
 void readADC(void);
-int readAdcChannel(unsigned char channel);
+uint16_t readAdcChannel( uint8_t n );
 void adcLoadDefConst(uint16_t *adcConst);
 /////////////////////////////////////////////////////

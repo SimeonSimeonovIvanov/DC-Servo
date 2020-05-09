@@ -105,7 +105,7 @@ eMBFuncReadDiscreteInputs( UCHAR * pucFrame, USHORT * usLen )
                 /* The response contains the function code, the starting address
                  * and the quantity of registers. We reuse the old values in the 
                  * buffer because they are still valid. */
-                *usLen += ucNBytes;;
+                *usLen += ucNBytes;
             }
         }
         else

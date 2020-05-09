@@ -13,9 +13,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-//#include "enc28j60_init.h"
-//#include "enc28j60_packet.h"
-//#include "enc28j60_status.h"
+
 
 #include "enc424j600/enc424j600.h"
 
@@ -64,9 +62,7 @@
  * \returns The packet size in bytes on success, \c 0 in the cases noted above.
  */
 #define hal_receive_packet(buffer, buffer_len) enc424j600PacketReceive(buffer, buffer_len)
-//enc28j60_receive_packet((buffer), (buffer_len))
 
-// ETHERNET_MAX_PACKET_SIZE
 
 /**
  * Sends an ethernet packet to the device.
@@ -80,7 +76,7 @@
  * \returns TRUE if the packet was sent, FALSE otherwise.
  */
 #define hal_send_packet(buffer, buffer_len) enc424j600PacketSend(buffer, buffer_len)
-//enc28j60_send_packet((buffer), (buffer_len))
+
 
 /**
  * Checks wether the network link is up and has been continuously up since the last call.
@@ -88,7 +84,7 @@
  * \returns \c TRUE if the network link is and has been up, \c FALSE otherwise.
  */
 #define hal_link_up()	enc424j600MACIsLinked()
-//enc28j60_link_up()
+
 
 /**
  * @}

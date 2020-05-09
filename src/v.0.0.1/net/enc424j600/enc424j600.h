@@ -769,8 +769,8 @@ typedef union __attribute__((aligned(2), packed)) {
 #define RXSTART			 (0x0600)	// Should be an even memory address
 ///////////////////////////////////////////////////////////////////////////////////////////
 // ENC424J600 SPI port
-#define ENC424J600_SPI_DDR	      DDRB
-#define ENC424J600_SPI_PORT	     PORTB
+/*#define ENC424J600_SPI_DDR				DDRB
+#define ENC424J600_SPI_PORT				PORTB
 
 #define ENC424J600_SPI_SCK_bp			PB1
 #define ENC424J600_SPI_SCK_bm			(1<<ENC424J600_SPI_SCK_bp)

@@ -1,5 +1,5 @@
 /*
-		The^day^of^DooM
+		simeon_s._ivanov@abv.bg
 
 	Create Date:	07.10.2010
 	Last Update:	10.10.2010
@@ -59,11 +59,6 @@ void initDac(void)
 
 void writeDac(uint16_t dac_a, uint16_t dac_b)
 {
-	//dac_a <<= 4;
-	//dac_b <<= 4;
-	//dac_a &= 0xfff0;
-	//dac_b &= 0xfff0;
-
 	select_analog_out();
 	spi_send_byte(0x30);
 	spi_send_byte(dac_a>>8);

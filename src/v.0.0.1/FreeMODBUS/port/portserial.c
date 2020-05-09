@@ -35,8 +35,6 @@
 #define UART_BAUD_CALC(UART_BAUD_RATE,F_OSC) \
 	( ( ( F_OSC ) / ( UART_BAUD_RATE ) / 16UL ) - 1 )
 
-extern uint8_t uiModbusTimeOutCounter;
-
 void
 vMBPortSerialEnable( BOOL xRxEnable, BOOL xTxEnable )
 {
@@ -159,8 +157,6 @@ ISR( SIG_UART_TRANS )
 ISR( SIG_USART_RECV )
 {
 	pxMBFrameCBByteReceived(  );
-
-//	uiModbusTimeOutCounter = 200;
 }
 
 ISR( SIG_USART_DATA )
