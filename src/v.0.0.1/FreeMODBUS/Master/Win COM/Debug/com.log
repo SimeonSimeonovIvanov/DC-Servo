@@ -1,0 +1,87 @@
+﻿cl : Command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  StdAfx.cpp
+cl : Command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  modbus.cpp
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\modbus\modbus.cpp(22): warning C4838: conversion from 'unsigned char' to 'char' requires a narrowing conversion
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\modbus\modbus.cpp(22): warning C4838: conversion from 'unsigned int' to 'char' requires a narrowing conversion
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\modbus\modbus.cpp(62): warning C4838: conversion from 'unsigned char' to 'char' requires a narrowing conversion
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\modbus\modbus.cpp(62): warning C4838: conversion from 'unsigned int' to 'char' requires a narrowing conversion
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\modbus\modbus.cpp(101): warning C4838: conversion from 'unsigned int' to 'char' requires a narrowing conversion
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\modbus\modbus.cpp(146): warning C4333: '>>': right shift by too large amount, data loss
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\modbus\modbus.cpp(148): warning C4838: conversion from 'unsigned int' to 'char' requires a narrowing conversion
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\modbus\modbus.cpp(148): warning C4838: conversion from 'unsigned char' to 'char' requires a narrowing conversion
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\modbus\modbus.cpp(197): warning C4838: conversion from 'unsigned int' to 'char' requires a narrowing conversion
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\modbus\modbus.cpp(236): warning C4838: conversion from 'unsigned int' to 'char' requires a narrowing conversion
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\modbus\modbus.cpp(275): warning C4838: conversion from 'unsigned int' to 'char' requires a narrowing conversion
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\modbus\modbus.cpp(317): warning C4838: conversion from 'unsigned int' to 'unsigned char' requires a narrowing conversion
+  modbus-tcp.cpp
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\modbus\modbus-tcp.cpp(265): warning C4333: '>>': right shift by too large amount, data loss
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\modbus\modbus-tcp.cpp(282): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+  modbus-rtu.cpp
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\modbus\modbus-rtu.cpp(280): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+  tcpSetingsDlg.cpp
+  ServoControlDlg.cpp
+  dacConstDlg.cpp
+  adcConstDlg.cpp
+  AboutDlg.cpp
+  com.cpp
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(56): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(70): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(136): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(299): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(300): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(381): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(385): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(389): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(402): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(454): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(503): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(517): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(520): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(537): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(646): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(654): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(707): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(787): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(790): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(793): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(796): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(799): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(865): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(868): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(871): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(874): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(877): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+e:\developments\elektronika\motor control\projects\dc servo\src\v.0.0.1\freemodbus\master\win com\com.cpp(880): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+  Generating Code...
+  com.vcxproj -> E:\Developments\Elektronika\Motor Control\Projects\DC Servo\src\v.0.0.1\FreeMODBUS\Master\Win COM\.\Debug\com.exe

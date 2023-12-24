@@ -196,7 +196,7 @@ LRESULT CALLBACK mainWndFunc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 				default: return false;
 				}
 
-				if( mbTCPMasterConnect(&lpMainData->mbMaster, lpMainData->mbMaster.szIP, atoi(lpMainData->mbMaster.szTcpPort)) ) {
+				if( mbTCPMasterConnect(&lpMainData->mbMaster, lpMainData->mbMaster.szIP, lpMainData->mbMaster.szTcpPort) ) {
 					return FALSE;
 				}
 				////////////////////////////////////////////////////////////////////////////////////////////

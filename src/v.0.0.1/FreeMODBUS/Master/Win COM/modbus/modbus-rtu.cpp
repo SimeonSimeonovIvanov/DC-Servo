@@ -33,7 +33,7 @@ int mdRTUReadDiscreteInputsOrCoils
 		return 1;
 	}
 
-	for( i = start; i < end - start; i++ ) {
+	for( i = start; i <= end - start; i++ ) {
 		io[i] = 1 & ( lpMb->rxBuffer[3 + i/8]>>(i - (8 * ( i / 8 ))) );
 	}
 
@@ -75,7 +75,7 @@ int mbRTUReadInputOrHoldingRegister
 	unsigned int *regValue
 )
 {
-	unsigned int i, j = 3, uiResult;
+	unsigned int i, j = 2, uiResult;
 
 	uiResult = mbRTUMasterReadResponse( lpMb, deviceID );
 
@@ -88,8 +88,8 @@ int mbRTUReadInputOrHoldingRegister
 	}
 
 	for( i = 0; i < wordCount; i++ ) {
-		regValue[i] = lpMb->rxBuffer[j]<<8 | lpMb->rxBuffer[++j];
-		++j;
+		regValue[i]  = lpMb->rxBuffer[++j]<<8;
+		regValue[i] |= lpMb->rxBuffer[++j];
 	}
 
 	return 0;
@@ -228,9 +228,9 @@ int mbRTUMasterSend( LPMB lpMb )
 		return 1;
 	}
 
-	while( flag ) {
+	//while( flag ) {
 		//Sleep(1);
-	}
+	//}
 
 	flag = 1;
 

@@ -98,7 +98,7 @@ int mbWriteSingleCoil
 	unsigned char coilIsOn
 )
 {
-	char txBuffer[] = { deviceID, 5, coilAddress>>8, coilAddress, 0, 0 };
+	char txBuffer[] = { (char)deviceID, 5, coilAddress>>8, coilAddress, 0, 0 };
 	unsigned int uiResult = 0;
 
 	if(coilIsOn) txBuffer[4] = (char)0xff;
@@ -141,7 +141,7 @@ int mbWriteMultipleCoils
 ) // ???
 {
 	char txBuffer[] = {
-		deviceID, 15,
+		(char)deviceID, 15,
 		coilAddress>>8, coilAddress,
 		numberOfCoil>>8, numberOfCoil,
 		( numberOfCoil + 7 ) / 8
@@ -194,7 +194,7 @@ int mbReadInputRegister
 	unsigned int *regValue
 )
 {
-	char txBuffer[] = { deviceID, 4, regAddress>>8, regAddress, wordCount>>8, wordCount };
+	char txBuffer[] = { (char)deviceID, 4, regAddress>>8, regAddress, wordCount>>8, wordCount };
 	unsigned int uiResult = 0;
 
 	lpMb->txBufferLenght = sizeof(txBuffer);
@@ -233,7 +233,7 @@ int mbReadHoldingRegisters
 	unsigned int *regValue
 )
 {
-	char txBuffer[] = { deviceID, 3, regAddress>>8, regAddress, wordCount>>8, wordCount };
+	char txBuffer[] = { (char)deviceID, 3, regAddress>>8, regAddress, wordCount>>8, wordCount };
 	unsigned int uiResult = 0;
 
 	lpMb->txBufferLenght = sizeof(txBuffer);
@@ -272,7 +272,7 @@ int mbWriteSingleRegister
 	unsigned int regValue
 )
 {
-	char txBuffer[] = { deviceID, 6, regAddress>>8, regAddress, regValue>>8, regValue };
+	char txBuffer[] = { (char)deviceID, 6, regAddress>>8, regAddress, regValue>>8, regValue };
 	unsigned int uiResult = 0;
 
 	lpMb->txBufferLenght = sizeof(txBuffer);

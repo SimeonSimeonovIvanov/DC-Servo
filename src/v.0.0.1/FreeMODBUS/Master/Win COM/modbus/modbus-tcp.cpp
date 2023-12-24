@@ -1,5 +1,10 @@
 #include "stdafx.h"
 
+#include <stdio.h>
+#include <sys/types.h>
+
+#include <stdlib.h>
+
 #include "modbus.h"
 #include "modbus-tcp.h"
 
@@ -31,7 +36,7 @@ int mdTCPReadDiscreteInputs
 	}
 	//-------------------------------------------------------------------------------
 
-	for(i = start; i < end - start; i++) {
+	for( i = start; i <= end - start; i++ ) {
 		input[i] = 1 & ( rxBuffer[ 9 + i / 8 ]>>(i - 8 * ( i / 8)) );
 	}
 
@@ -52,7 +57,7 @@ int mbTCPReadCoils
 	unsigned int i;
 	char rxBuffer[100];
 
-	iResult = mbTCPMsterRead( lpMb, deviceID, rxBuffer, 10 + ( lenght - start ) / 8 );
+	iResult = mbTCPMsterRead( lpMb, deviceID, rxBuffer, 10 + (lenght - start ) / 8 );
 	if( iResult ) {
 		return iResult;
 	}
@@ -65,7 +70,7 @@ int mbTCPReadCoils
 		return 8; // Error: Byte Count
 	}
 
-	for(i = start; i < start + lenght; i++) {
+	for( i = start; i <= start + lenght; i++ ) {
 		output[i] = 1 & ( rxBuffer[9 + i / 8]>>(i - 8 * ( i / 8)) );
 	}
 
@@ -132,7 +137,7 @@ int mbTCPReadInputRegister
 {
 	int iResult;
 	unsigned int i, j = 8;
-	unsigned char rxBuffer[100];
+	unsigned char rxBuffer[200];
 
 	iResult = mbTCPMsterRead( lpMb, deviceID, (char*)rxBuffer, 9 + 2 * wordCount );
 	if( iResult ) {
@@ -148,12 +153,13 @@ int mbTCPReadInputRegister
 	}
 
 	for(i = 0; i < wordCount; i++) {
-		regValue[i] = rxBuffer[++j]<<8 | rxBuffer[++j];
+		regValue[i]  = rxBuffer[++j]<<8;
+		regValue[i] |= rxBuffer[++j];
 	}
 
 	return 0;
 }
-// / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
+//////////////////////////////////////////////////////////////////////////////////////
 // FC3 - Read Holding Registers
 int mbTCPReadHoldingRegisters
 (
@@ -181,8 +187,9 @@ int mbTCPReadHoldingRegisters
 		return 9; // Error: Byte Count
 	}
 
-	for(i = 0; i < wordCount; i++ ) { // ???
-		regValue[i] = rxBuffer[++j]<<8 | rxBuffer[++j];
+	for( i = 0; i < wordCount; i++ ) { // ???
+		regValue[i]  = rxBuffer[++j] << 8;
+		regValue[i] |= rxBuffer[++j];
 	}
 
 	return 0;
@@ -263,17 +270,29 @@ int mbTCPMasterSend
 	}
 
 	iResult = send(lpMb->tcpSocket, txBuffer, 6 + lpMb->txBufferLenght, 0);
+	
 	if( SOCKET_ERROR == iResult ) {
-		return 2;
+		char szBuffer[1000];
+		int iError;
+
+		iError = WSAGetLastError();
+		if( WSAEWOULDBLOCK == iError ) {
+			printf(szBuffer, "recv failed with error: WSAEWOULDBLOCK\n");
+		} else {
+			sprintf(szBuffer, "recv failed with error: %ld\n", iError);
+		}
+
+		closesocket(lpMb->tcpSocket);
+		WSACleanup();
+		
+		if (!mbTCPMasterConnect(lpMb, lpMb->szIP, lpMb->szTcpPort)) {
+			return 0;
+		}
+		return 1;
 	}
 
 	return 0;
 }
-
-#include <sys/types.h>
-//#include <socket.h>
-//#include <sys/time.h>
-#include <stdio.h>
 
 int mbTCPMsterRead
 (
@@ -291,7 +310,7 @@ int mbTCPMsterRead
 	struct timeval timeout;
 	int rc, result;
 
-	timeout.tv_sec = 0;
+	timeout.tv_sec = 1;
 	timeout.tv_usec = 0;
 
 	FD_ZERO( &fds );
@@ -304,6 +323,25 @@ int mbTCPMsterRead
 	///////////////////////////////////////////////////////////
 
 	dwBytesRead = recv(lpMb->tcpSocket, rxBuffer, len, 0);
+
+	if( dwBytesRead == SOCKET_ERROR ) {
+		int iError = WSAGetLastError();
+		
+		if( iError == WSAEWOULDBLOCK ) {
+			printf("recv failed with error: WSAEWOULDBLOCK\n");
+		} else {
+			printf("recv failed with error: %ld\n", iError);
+		}
+
+		closesocket(lpMb->tcpSocket);
+		WSACleanup();
+
+		if( !mbTCPMasterConnect(lpMb, lpMb->szIP, lpMb->szTcpPort) ) {
+			return 0;
+		}
+
+		return 1;
+	}
 
 	if( !dwBytesRead ) {
 //		printf("Connection closed\n");
@@ -322,7 +360,6 @@ int mbTCPMsterRead
 	}
 
 	return iResult;
-
 }
 //////////////////////////////////////////////////////////////////////////////////////////////
 int mbTCPMasterCheckMBAPHeader
@@ -332,15 +369,17 @@ int mbTCPMasterCheckMBAPHeader
 	char *rxBuffer
 )
 {
-	if( (signed)lpMb->TID != (rxBuffer[0]<<8 | rxBuffer[1]) ) {
-		//return 1; // Error: TID
+	unsigned int tempTID = rxBuffer[0] << 8 | rxBuffer[1];
+
+	if( (unsigned int)lpMb->TID != tempTID ) {
+//		return 1; // Error: TID
 	}
 
 	if( rxBuffer[3] || rxBuffer[2] ) {
 		return 2; // Error: Protocol
 	}
 
-	if( (3 + rxBuffer[8]) != (rxBuffer[4]<<8 | rxBuffer[5]) ) {
+	if( ( 3 + rxBuffer[8] ) != ( rxBuffer[4]<<8 | rxBuffer[5] ) ) {
 		return 3; // Error: Lenght
 	}
 
@@ -355,10 +394,10 @@ int mbTCPMasterConnect
 (
 	LPMB lpMb,
 	char *szIP,
-	int port
+	char *port
 )
 {
-	if( socketTryConnect( &lpMb->tcpSocket, inet_addr(szIP), port ) ) {
+	if( socketTryConnect( &lpMb->tcpSocket, inet_addr(szIP), atoi(port)) ) {
 		return 2;
 	}
 
@@ -398,10 +437,16 @@ int socketTryConnect
 	target.sin_addr.s_addr = hostname;
 
 	iResult = connect(*s, (SOCKADDR*)&target, sizeof(target));
-	if( SOCKET_ERROR == iResult ) {
+	if (SOCKET_ERROR == iResult) {
 		closesocket(*s);
 		return 4;
 	}
+
+	int iOptval = 1;
+	setsockopt(*s, IPPROTO_TCP, TCP_NODELAY, (const char FAR *)&iOptval, sizeof(iOptval));
+
+	iOptval = 1;
+	setsockopt(*s, SOL_SOCKET, SO_KEEPALIVE, (const char FAR *)&iOptval, sizeof(iOptval));
 
 	return 0;
 }

@@ -85,7 +85,7 @@ int mbTCPWriteMultipleRegisters
 int mbTCPMasterConnect(
 	LPMB lpMb,
 	char *szIP,
-	int port
+	char *port
 );
 
 int mbTCPMasterSend(
